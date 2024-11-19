@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "300644297532",
+    "project_id": "hosteloutpassapp-48cd8",
+    "storage_bucket": "hosteloutpassapp-48cd8.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:300644297532:android:51d4629b1813cc15a94c39",
+        "android_client_info": {
+          "package_name": "com.example.hostel_outpass_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBvZZJhvt1K9pvS1XDfXLyD7r2g-u44k0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

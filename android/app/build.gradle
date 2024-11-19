@@ -1,0 +1,51 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
+    id "dev.flutter.flutter-gradle-plugin"
+    id "com.google.gms.google-services" // Add the Google Services plugin
+}
+
+android {
+    namespace = "com.example.hostel_outpass_app"
+    compileSdk = flutter.compileSdkVersion
+    ndkVersion = flutter.ndkVersion
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        // Specify your own unique Application ID
+        applicationId = "com.example.hostel_outpass_app"
+        minSdk = flutter.minSdkVersion
+        targetSdk = flutter.targetSdkVersion
+        versionCode = flutter.versionCode
+        versionName = flutter.versionName
+    }
+
+    buildTypes {
+        release {
+            // Add your own signing config for the release build if required
+            signingConfig = signingConfigs.debug
+        }
+    }
+}
+
+flutter {
+    source = "../.."
+}
+
+dependencies {
+    implementation platform('com.google.firebase:firebase-bom:32.1.1') // Firebase BOM for managing versions
+    implementation 'com.google.firebase:firebase-analytics' // Firebase Analytics dependency
+    // Add other Firebase dependencies as needed (e.g., Auth, Firestore, etc.)
+}
+
+// Apply the Google Services plugin
+apply plugin: 'com.google.gms.google-services'
