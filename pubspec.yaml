@@ -5,45 +5,56 @@ publish_to: 'none' # This prevents accidental publishing to pub.dev.
 version: 1.0.0+1
 
 environment:
-  sdk: '>=3.0.0 <4.0.0'
+  sdk: '>=3.0.0 <4.0.0' # Ensure you're using Flutter 3.x
 
 dependencies:
   flutter:
     sdk: flutter
-  cupertino_icons: ^1.0.8
-  firebase_auth: ^5.3.3          # Correct latest stable version for Firebase Auth
-  firebase_core: ^3.8.0          # Correct latest stable version for Firebase Core
-  cloud_firestore: ^5.5.0        # Latest stable version for Firestore
+  
+  cupertino_icons: ^1.0.8 
+  logger: ^1.0.0       # Default iOS icons
+  firebase_auth: ^5.3.3          # Firebase Authentication for user login/signup
+  firebase_core: ^3.8.0          # Core Firebase SDK
+  cloud_firestore: ^5.5.0        # Firestore database for storing outpass data
   fluttertoast: ^8.2.1           # For showing toast notifications
   qr_flutter: ^4.0.0             # For generating QR codes
-  provider: ^6.1.2               # Correct latest stable version for Provider
-
-  logging: ^1.0.1
-
-  qr_code_scanner: ^0.4.0
+  provider: ^6.1.2               # State management library
+  logging: ^1.0.1                # Logging library for debug purposes
+  qr_code_scanner: ^0.5.0        # For scanning QR codes
+  async: ^2.11.0                 # Utility for asynchronous programming
+  characters: ^1.3.0             # String manipulation with Unicode support
+  collection: ^1.18.0            # Advanced data structures
+  mobile_scanner: ^6.0.2
+  firebase_database: ^11.1.6
+  file_picker: ^5.0.0
+  zxing_lib: ^1.0.0
+  image: ^3.3.0
   
-  async: 2.11.0
   
-  characters: 1.3.0
-  collection: 1.18.0
-
-  
+  qr_code_tools: ^0.1.0
+  html: ^0.15.0
 
 dev_dependencies:
-  #flutter_test:
-   # sdk: flutter
-  flutter_lints: ^5.0.0          # Latest stable version for linting
+  flutter_lints: ^5.0.0          # Provides lint rules and best practices
 
 flutter:
-  uses-material-design: true
+  uses-material-design: true     # Enable Material Design widgets
 
-  # Uncomment and modify these lines if you plan to include assets
-  # assets:
+  # Asset management (uncomment and modify paths if you plan to include images/icons)
+
+assets:
+    - flutter_assets/HostelEntryQR.png
+
+
+
+    - flutter_asset/images/logo_hostel.jpg
+   
   #   - assets/images/
   #   - assets/icons/
 
-  # Uncomment and modify this section if you use custom fonts
+  # Fonts can be included here if needed
   # fonts:
   #   - family: CustomFont
   #     fonts:
   #       - asset: fonts/CustomFont-Regular.ttf
+  #       - asset: fonts/CustomFont-Bold.ttf

@@ -9,10 +9,15 @@
 # packages, and plugins designed to encourage good coding practices.
 analyzer:
   errors:
+    avoid_web_libraries_in_flutter: ignore
     file_names: ignore
     library_private_types_in_public_api: ignore
+    unnecessary_null_comparison: ignore
     unused_import: ignore
+    unused_local_variable: ignore
     use_build_context_synchronously: ignore
+    use_key_in_widget_constructors: ignore
+    use_super_parameters: ignore
 include: package:flutter_lints/flutter.yaml
 
 linter:
